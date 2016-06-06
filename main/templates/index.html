@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div id="content">
+        <div id="input">
+            <div class=" sub-heading ">Enter Email Details here</div>
+
+            <form name="inputForm" id="inputForm"
+                  style="min-height: 250px;padding: 22px; padding-left: 0px;" method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <div class="fieldWrapper">
+                    {{ form.subject.errors }}
+                    {{ form.subject }}
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.sender.errors }}
+                    {{ form.sender }}
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.message.errors }}
+                    {{ form.message }}
+                </div>
+                <input type="submit" class="button" value="Analyse Email" id="submitButton1"/>
+            </form>
+
+
+        </div>
+
+        <div id="output">
+            <div class=" sub-heading ">Email Analysis Result</div>
+            Form input: {{ form.cleaned_data }}
+
+        </div>
+    </div>
+
+
+{% endblock %}
