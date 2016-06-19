@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-
 {% block content %}
 
     <div id="content">
@@ -31,7 +30,9 @@
 
         <div id="output">
             <div class=" sub-heading ">Email Analysis Result</div>
-            Form input: {{ form.cleaned_data }}
+{#            Form input: {{ form.cleaned_data }}#}
+
+            {{ report }}
 
         </div>
     </div>

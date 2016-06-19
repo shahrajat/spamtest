@@ -31,10 +31,11 @@ h1, h2, h3 {
 }
 
 #content {
-    height: 1639px;
-    width: inherit;
-    margin: 1px;
+    width: 1200px;
+    height: 643px;
     clear: both;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 #main-menu .menu ul {
@@ -315,13 +316,6 @@ h1, h2, h3 {
     background-size: 20px 18px;
     background-image: -webkit-linear-gradient(bottom left, #31496a, #899db8);
     background-image: linear-gradient(to top right, #31496a, #899db8);
-}
-
-#content {
-    width: 1320px;
-    margin: 0 auto;
-    height: 643px;
-    margin-top: 30px;
 }
 
 #input, #output {

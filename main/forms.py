@@ -7,7 +7,7 @@ class NameForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea, label='')
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(NameForm, self).__init__(*args, **kwargs)
         self.fields['sender'].widget.attrs.update({
             'placeholder': 'Enter sender\'s Email address',
             'class': 'input-box',
